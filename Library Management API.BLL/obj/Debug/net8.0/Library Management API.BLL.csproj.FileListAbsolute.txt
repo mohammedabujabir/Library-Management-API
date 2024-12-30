@@ -1,0 +1,15 @@
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\bin\Debug\net8.0\Library Management API.BLL.deps.json
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\bin\Debug\net8.0\Library Management API.BLL.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\bin\Debug\net8.0\Library Management API.BLL.pdb
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\bin\Debug\net8.0\Library Management API.DAL.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\bin\Debug\net8.0\Library Management API.DAL.pdb
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\Library Management API.BLL.csproj.AssemblyReference.cache
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\Library Management API.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\Library Management API.BLL.AssemblyInfoInputs.cache
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\Library Management API.BLL.AssemblyInfo.cs
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\Library Management API.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\Library .DC488E95.Up2Date
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\Library Management API.BLL.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\refint\Library Management API.BLL.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\Library Management API.BLL.pdb
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\ref\Library Management API.BLL.dll

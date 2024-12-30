@@ -1,0 +1,12 @@
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.DAL\bin\Debug\net8.0\Library Management API.DAL.deps.json
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.DAL\bin\Debug\net8.0\Library Management API.DAL.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.DAL\bin\Debug\net8.0\Library Management API.DAL.pdb
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.DAL\obj\Debug\net8.0\Library Management API.DAL.csproj.AssemblyReference.cache
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.DAL\obj\Debug\net8.0\Library Management API.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.DAL\obj\Debug\net8.0\Library Management API.DAL.AssemblyInfoInputs.cache
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.DAL\obj\Debug\net8.0\Library Management API.DAL.AssemblyInfo.cs
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.DAL\obj\Debug\net8.0\Library Management API.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.DAL\obj\Debug\net8.0\Library Management API.DAL.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.DAL\obj\Debug\net8.0\refint\Library Management API.DAL.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.DAL\obj\Debug\net8.0\Library Management API.DAL.pdb
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.DAL\obj\Debug\net8.0\ref\Library Management API.DAL.dll
