@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Library Management API.PL.props" />
+</Project>

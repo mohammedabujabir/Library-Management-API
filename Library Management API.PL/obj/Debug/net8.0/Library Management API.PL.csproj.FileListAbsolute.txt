@@ -1,0 +1,46 @@
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\appsettings.json
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Library Management API.PL.exe
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Library Management API.PL.deps.json
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Library Management API.PL.runtimeconfig.json
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Library Management API.PL.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Library Management API.PL.pdb
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Serilog.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Library Management API.BLL.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Library Management API.DAL.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Library Management API.BLL.pdb
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\bin\Debug\net8.0\Library Management API.DAL.pdb
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\Library Management API.PL.csproj.AssemblyReference.cache
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\Library Management API.PL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\Library Management API.PL.AssemblyInfoInputs.cache
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\Library Management API.PL.AssemblyInfo.cs
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\Library Management API.PL.csproj.CoreCompileInputs.cache
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\Library Management API.PL.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\Library Management API.PL.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\staticwebassets\msbuild.Library Management API.PL.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\staticwebassets\msbuild.build.Library Management API.PL.props
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Library Management API.PL.props
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Library Management API.PL.props
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\scopedcss\bundle\Library Management API.PL.styles.css
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\Library .B4681617.Up2Date
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\Library Management API.PL.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\refint\Library Management API.PL.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\Library Management API.PL.pdb
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\Library Management API.PL.genruntimeconfig.cache
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.PL\obj\Debug\net8.0\ref\Library Management API.PL.dll
