@@ -1,4 +1,5 @@
-﻿using Library_Management_API.DAL.Models;
+﻿using Library_Management_API.BLL.DTOs.MemberDto;
+using Library_Management_API.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace Library_Management_API.BLL.Services.IServices
 {
     public interface IMemberService
     {
-        void AddMember(Member member);
-        void UpdateMember(int id, Member NewMember);
-        List<Member> GetMembers();
-        void DeleteMember(int id);
+        bool AddMember(AddMemberDto memberDto);
+        bool UpdateMember(int id, UpdateMemberDto newMemberDto);
+        List<GetMembersDto> GetMembers();
+        bool DeleteMember(int id);
     }
 }

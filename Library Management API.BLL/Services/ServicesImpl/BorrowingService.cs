@@ -1,83 +1,88 @@
 ﻿using Library_Management_API.BLL.Services.IServices;
-using Library_Management_API.DAL.Models;
+using Library_Management_API.BLL.DTOs.BorrowingDto;
+using Library_Management_API.DAL.Entities;
 using Library_Management_API.DAL.Repositories;
 using Library_Management_API.DAL.Repositories.IRepositories;
+using Library_Management_API.DAL.Repositories.RepositoriesImpl;
 using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Mapster;
 
 namespace Library_Management_API.BLL.Services.ServicesImpl
 {
     public class BorrowingService : IBorrowingService
     {
         private readonly IBorrowingRepository borrowingRepository;
-        private readonly IBookRepository bookRepository;
+       
 
-        public BorrowingService(IBorrowingRepository BorrowingRepository, IBookRepository BookRepository)
+        public BorrowingService(IBorrowingRepository BorrowingRepository)
         {
             borrowingRepository = BorrowingRepository;
-            bookRepository = BookRepository;
+            
         }
 
-        public List<Borrowing> GetBorrowings()
+        public List<GetBorrowingDto> GetBorrowings()
         {
-            var borrowings = borrowingRepository.GetAllBorrowing();
-            Log.Information("All borrowers were successfully brought");
-            return borrowings;
+            try
+            {
+                var borrowings = borrowingRepository.GetBorrowing();
+                var borrowersDto = borrowings.Adapt<List<GetBorrowingDto>>();
+                Log.Information("All borrowers were successfully brought");
+                return borrowersDto;
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"An error occurred while return the Borrowers: {ex.Message}");
+                throw new Exception("An error occurred while return the Borrowers", ex);
+            }
+
         }
-        public void Borrowedbook(int MemberId, int BookId)
+        public bool Borrowedbook(int memberId, int bookId)
         {
-            var borrowed = borrowingRepository.GetAllBorrowing();
-            var books = bookRepository.GetAllBooks();
-            var book = books.FirstOrDefault(b => b.Id == BookId);
-            if (book == null || book.Quantity <= 0)
+            try
             {
-                throw new KeyNotFoundException("The book was not borrowed");
+                var result = borrowingRepository.AddBorrowing(memberId, bookId);
+                if (result)
+                    Log.Information("The borrowed book has been successfully added");
 
+                else
+                    Log.Error("Failed to add the borrowed book");
+
+                return result;
             }
-            var member = borrowed.Where(m => m.MemberId == MemberId && m.ReturnDate == null).ToList();
-            if (member.Count() > 5)
-            {
-                throw new KeyNotFoundException("The member has exceeded the limit allowed for borrowing");
-
+            catch (Exception ex) {
+                Log.Error($"Failed to add the borrowed book: {ex.Message}");
+                throw new Exception("An error occurred while aadd the borrowed book", ex);
             }
+           
+                
 
-            Borrowing BorrowedBook = new Borrowing()
-            {
-                MemberId = MemberId,
-                BookId = BookId,
-                BorrowDate = DateTime.Now
-            };
-            borrowed.Add(BorrowedBook);
-            book.Quantity--;
-
-            borrowingRepository.SaveBorrowing(borrowed);
-            bookRepository.SaveBooks(books);
-            Log.Information("The borrowed book has been successfully added", book.Id);
         }
-        public void ReturnBook(int MemberId, int BookId)
+        public bool ReturnBook(int memberId, int bookId)
         {
-            var borrowed = borrowingRepository.GetAllBorrowing();
-            var books = bookRepository.GetAllBooks();
-            var borrowedbook = borrowed.FirstOrDefault(b => b.MemberId == MemberId && b.BookId == BookId);
-            if (borrowedbook == null)
+            try
             {
-                throw new KeyNotFoundException("He did not borrow any books");
-
+                var result = borrowingRepository.ReturnBook(memberId, bookId);
+                if (result)
+                    Log.Information("The borrowed book was successfully returned");
+                else
+                    Log.Error($"Failed to return the borrowed book");
+                return result;
             }
-            borrowedbook.ReturnDate = DateTime.Now;
-            var book = books.FirstOrDefault(b => b.Id == BookId);
-            if (book != null)
+            catch (Exception ex)
             {
-                book.Quantity++;
+                Log.Error($"Failed to return the borrowed book  : {ex.Message}");
+                throw new Exception("An error occurred while return the borrowed book", ex);
             }
-            borrowingRepository.SaveBorrowing(borrowed);
-            bookRepository.SaveBooks(books);
-            Log.Information("The borrowed book was successfully returned", book.Id);
+          
         }
 
     }
+       
+
+   
 }

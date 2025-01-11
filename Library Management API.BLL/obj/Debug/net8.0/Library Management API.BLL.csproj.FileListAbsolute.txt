@@ -13,3 +13,6 @@ C:\Users\Technipal\source\repos\Library Management API\Library Management API\Li
 C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\refint\Library Management API.BLL.dll
 C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\Library Management API.BLL.pdb
 C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\ref\Library Management API.BLL.dll
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\Library Management API.BLL.sourcelink.json
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\bin\Debug\net8.0\Library Management API.BLL.runtimeconfig.json
+C:\Users\Technipal\source\repos\Library Management API\Library Management API\Library Management API.BLL\obj\Debug\net8.0\Library Management API.BLL.genruntimeconfig.cache

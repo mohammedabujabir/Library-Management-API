@@ -1,7 +1,10 @@
 ﻿using Library_Management_API.BLL.Services.IServices;
-using Library_Management_API.DAL.Models;
+using Library_Management_API.BLL.DTOs.MemberDto;
+using Library_Management_API.DAL.Entities;
 using Library_Management_API.DAL.Repositories;
 using Library_Management_API.DAL.Repositories.IRepositories;
+using Library_Management_API.DAL.Repositories.RepositoriesImpl;
+using Mapster;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -19,53 +22,74 @@ namespace Library_Management_API.BLL.Services.ServicesImpl
         {
             memberRepository = MemberRepository;
         }
-
-        public void AddMember(Member member)
+        public List<GetMembersDto> GetMembers()
         {
-            var members = memberRepository.GetALLMembers();
-            member.Id = members.Count() > 0 ? members.Max(m => m.Id) + 1 : 1;
-            members.Add(member);
-            memberRepository.SaveMembers(members);
-            Log.Information("The new member has been added successfully", member.Id, member.Name);
+            try
+            {
+                var members = memberRepository.GetAllMembers();
+                var memberDto = members.Adapt<List<GetMembersDto>>();
+                Log.Information("All members have been successfully brought");
+                return memberDto;
+            }
+            catch (Exception ex) {
+                Log.Error("An error occurred while brought the member", ex.Message);
+                throw new Exception("An error occurred while brought the member", ex);
+            }
+        }
+        public bool AddMember(AddMemberDto memberDto)
+        {
+            try
+            {
+                var member = memberDto.Adapt<Member>();
+                var result = memberRepository.AddMember(member);
+                if (result)
+                    Log.Information("The new member has been added successfully", member.Id, member.Name);
+                else
+                    Log.Error($"Failed to add the new member");
+                return result;
+            }
+            catch (Exception ex) {
+                Log.Error($"An error occurred while adding the member: {ex.Message}");
+                throw new Exception("An error occurred while adding the member", ex);
+            }
+
         }
 
-        public void UpdateMember(int id, Member NewMember)
+        public bool UpdateMember(int id, UpdateMemberDto newMemberDto)
         {
-
-            var members = memberRepository.GetALLMembers();
-            var member = members.FirstOrDefault(m => m.Id == id);
-            if (member == null)
+            try
             {
-                throw new KeyNotFoundException("member not found");
+                var member = newMemberDto.Adapt<Member>();
+                var result = memberRepository.UpdateMember(id, member);
+                if (result)
+                    Log.Information("The member data has been updated successfully", member.Id, member.Name);
+                else
+                    Log.Error($"The member with the id {id} does not exist or update failed");
+                return result;
+            }
+            catch (Exception ex) {
+                Log.Error($"An error occurred while updating the member: {ex.Message}");
+                throw new Exception("An error occurred while updating the member", ex);
+            }
+        }
+
+        public bool DeleteMember(int id)
+        {
+            try
+            {
+                var result = memberRepository.DeleteMember(id);
+                if (result)
+                    Log.Information("The a member has been successfully deleted", id);
+                else
+                    Log.Error($"Failed to delete a member data", id);
+                return result;
 
             }
-            member.Name = NewMember.Name;
-            member.Email = NewMember.Email;
-            member.MemberShipType = NewMember.MemberShipType;
-            memberRepository.SaveMembers(members);
-            Log.Information("The member data has been updated successfully", member.Id, member.Name);
-        }
-
-        public List<Member> GetMembers()
-        {
-            var members = memberRepository.GetALLMembers();
-            Log.Information("All members have been successfully brought");
-            return members;
-
-        }
-
-        public void DeleteMember(int id)
-        {
-            var members = memberRepository.GetALLMembers();
-            var member = members.FirstOrDefault(m => m.Id == id);
-            if (member == null)
-            {
-
-                throw new KeyNotFoundException("member not found");
+            catch (Exception ex) {
+                Log.Error($"An error occurred while deleting the member: {ex.Message}");
+                throw new Exception("An error occurred while updating the member", ex);
             }
-            members.Remove(member);
-            memberRepository.SaveMembers(members);
-            Log.Information("The member has been successfully deleted", member.Id, member.Name);
+            
         }
     }
 }
