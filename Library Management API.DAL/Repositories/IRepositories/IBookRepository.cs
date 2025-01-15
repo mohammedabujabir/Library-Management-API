@@ -1,4 +1,5 @@
-﻿using Library_Management_API.DAL.Models;
+﻿
+using Library_Management_API.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,9 @@ namespace Library_Management_API.DAL.Repositories.IRepositories
     public interface IBookRepository
     {
         List<Book> GetAllBooks();
-        void SaveBooks(List<Book> books);
+        bool AddBook(Book book);
+        Book GetBookById(int id);
+        bool DeleteBook(int id);
+        bool UpdateBook(int id,Book updateBook);
     }
 }

@@ -19,23 +19,55 @@ namespace Library_Management_API.PL.Controllers
         [HttpGet]
         public IActionResult GetBorrowing()
         {
-            Log.Information("A request has been sent to bring borrowers");
-            var borrowings= borrowingService.GetBorrowings();
-            return Ok(borrowings);
+            try
+            {
+                Log.Information("A request has been sent to bring borrowers");
+                var borrowings = borrowingService.GetBorrowings();
+                if(borrowings.Count()==0)
+                    return NotFound(borrowings);
+                else
+                return Ok(borrowings);
+            }
+            catch (Exception ex) {
+                Log.Error($"An error occurred while fetching borrowed books: {ex.Message}");
+                return BadRequest("False:Failed to bring borrowed books");
+            }
+            
         }
         [HttpPost("BorrowBook")]
-        public IActionResult BorrowBook(int MemberId,int bookId)
+        public IActionResult BorrowBook(int memberId,int bookId)
         {
-            Log.Information("A request has been sent to add the borrowed book");
-            borrowingService.Borrowedbook(MemberId, bookId);
-            return Ok("book borrowed successfully");
+            try
+            {
+                Log.Information("A request has been sent to add the borrowed book");
+                var status= borrowingService.Borrowedbook(memberId, bookId);
+                if(status)
+                return Ok($"status : {status} book borrowed successfully");
+                else return BadRequest($"status: {status} The book is not available for borrowing  or the member exceeded the borrowing limit");
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"An error occurred while adding the borrowed book: {ex.Message}");
+                return BadRequest("False:Failed to add the borrowed book");
+            }
+
         }
 
         [HttpPost("ReturnBook")]
-        public IActionResult ReturnBook(int MemberId, int bookId) {
-            Log.Information("A request has been sent to return the borrowed book");
-            borrowingService.ReturnBook(MemberId, bookId);
-            return Ok("book returned successfully");
+        public IActionResult ReturnBook(int memberId, int bookId) {
+            try
+            {
+                Log.Information("A request has been sent to return the borrowed book");
+                var status = borrowingService.ReturnBook(memberId, bookId);
+                if(status)
+                return Ok($"status : {status} book returned successfully");
+                else return BadRequest($"status : {status} The book has not been borrowed by a person or it does not exist ");
+            }
+            catch (Exception ex) {
+                Log.Error($"An error occurred while returning the borrowed book: {ex.Message}");
+                return BadRequest("False:Failed to return the borrowed book");
+            }
+          
         }
     }
 }

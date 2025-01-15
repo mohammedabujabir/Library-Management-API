@@ -1,4 +1,4 @@
-﻿using Library_Management_API.DAL.Models;
+﻿using Library_Management_API.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

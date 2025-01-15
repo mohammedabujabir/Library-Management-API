@@ -1,4 +1,6 @@
-﻿using Library_Management_API.DAL.Models;
+﻿
+using Library_Management_API.BLL.DTOs.BookDto;
+using Library_Management_API.DAL.Entities;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -10,9 +12,9 @@ namespace Library_Management_API.BLL.Services.IServices
 {
     public interface IBookService
     {
-        void AddBook(Book book);
-        void UpdateBook(int id, Book updatedBook);
-        List<Book> GetBooks(string? genre = null, bool? available = null);
-        void DeleteBook(int id);
+        bool AddBook(AddBookDto bookDto);
+        bool UpdateBook(int id, UpdateBookDto updatedBookDto);
+        List<GetBooksDto> GetBooks(string? genre = null, bool? available = null);
+        bool DeleteBook(int id);
     }
 }

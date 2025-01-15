@@ -30,7 +30,7 @@
     "Parameters": [
       {
         "Name": "book",
-        "Type": "Library_Management_API.DAL.Models.Book",
+        "Type": "Library_Management_API.BLL.DTOs.BookDto.AddBookDto",
         "IsRequired": true
       }
     ],
@@ -50,8 +50,8 @@
         "IsRequired": false
       },
       {
-        "Name": "book",
-        "Type": "Library_Management_API.DAL.Models.Book",
+        "Name": "updatedBookDto",
+        "Type": "Library_Management_API.BLL.DTOs.BookDto.UpdateBookDto",
         "IsRequired": true
       }
     ],
@@ -92,7 +92,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "MemberId",
+        "Name": "memberId",
         "Type": "System.Int32",
         "IsRequired": false
       },
@@ -113,7 +113,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "MemberId",
+        "Name": "memberId",
         "Type": "System.Int32",
         "IsRequired": false
       },
@@ -144,8 +144,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "member",
-        "Type": "Library_Management_API.DAL.Models.Member",
+        "Name": "memberDto",
+        "Type": "Library_Management_API.BLL.DTOs.MemberDto.AddMemberDto",
         "IsRequired": true
       }
     ],
@@ -165,8 +165,8 @@
         "IsRequired": false
       },
       {
-        "Name": "NewMember",
-        "Type": "Library_Management_API.DAL.Models.Member",
+        "Name": "newMemberDto",
+        "Type": "Library_Management_API.BLL.DTOs.MemberDto.UpdateMemberDto",
         "IsRequired": true
       }
     ],

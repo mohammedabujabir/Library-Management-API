@@ -21,17 +21,42 @@ namespace Library_Management_API.PL.Controllers
         [HttpGet("GetCurrently")]
         public IActionResult GetCurrentlyBorrowedBooks()
         {
-            Log.Information("A request has been sent to create a report on currently borrowed books");
-            var report = reportingService.GetCurrentlyBorrowedBooks();
-            return Ok(report);
+            try
+            {
+                Log.Information("A request has been sent to create a report on currently borrowed books");
+                var report = reportingService.GetCurrentlyBorrowedBooks();
+                if (report.Count == 0)
+                {
+                    return NotFound(report);
+                }else
+                return Ok(report);
+            }
+            catch (Exception ex) {
+                Log.Error($"An error occurred while preparing a report on currently borrowed books: {ex.Message}");
+                return BadRequest("False:Failed to prepare a report on currently borrowed books");
+            }
+           
         }
 
         [HttpGet("GetLateReturns")]
         public IActionResult GetLateReturns()
         {
-            Log.Information("A request was sent to create a report on books that were delivered late");
-            var report = reportingService.GetLateReturns();
-            return Ok(report);
+            try
+            {
+                Log.Information("A request was sent to create a report on books that were delivered late");
+                var report = reportingService.GetLateReturns();
+                if (report.Count == 0)
+                {
+                    return NotFound(report);
+                }
+                else
+                    return Ok(report);
+            }
+            catch (Exception ex) {
+                Log.Error($"An error occurred while preparing a report on books that were delivered late: {ex.Message}");
+                return BadRequest("False:Failed to prepare a report on books that were delivered late");
+            }
+          
         }
 
     }

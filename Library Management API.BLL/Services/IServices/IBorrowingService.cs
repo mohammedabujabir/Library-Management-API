@@ -1,4 +1,5 @@
-﻿using Library_Management_API.DAL.Models;
+﻿using Library_Management_API.BLL.DTOs.BorrowingDto;
+using Library_Management_API.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,8 @@ namespace Library_Management_API.BLL.Services.IServices
 {
     public interface IBorrowingService
     {
-        List<Borrowing> GetBorrowings();
-        void Borrowedbook(int MemberId, int BookId);
-        void ReturnBook(int MemberId, int BookId);
+        List<GetBorrowingDto> GetBorrowings();
+        bool Borrowedbook(int memberId, int bookId);
+        bool ReturnBook(int memberId, int bookId);
     }
 }
