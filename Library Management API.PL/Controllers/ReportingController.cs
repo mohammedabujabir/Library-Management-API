@@ -54,11 +54,12 @@ namespace Library_Management_API.PL.Controllers
                 else
                     return Ok(report);
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 Log.Error($"An error occurred while preparing a report on books that were delivered late: {ex.Message}");
                 return BadRequest("False:Failed to prepare a report on books that were delivered late");
             }
-          
+
         }
 
     }
